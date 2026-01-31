@@ -1,0 +1,46 @@
+# --- OS & IDE Configs ---
+.DS_Store
+.vscode/
+.idea/
+*.swp
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+env/
+venv/
+
+# --- Docker & Secrets (CRITICAL) ---
+# Ignore environment variables containing passwords/keys
+.env
+docker/.env
+docker/.env.*
+
+# --- Database Persistence (DO NOT COMMIT) ---
+# These folders contain your actual database data
+postgres/data/
+redis/data/
+
+# --- Apache Airflow ---
+airflow/logs/
+airflow/*.pid
+airflow/*.err
+airflow/*.log
+airflow/airflow-webserver.pid
+# Ignore the local SQLite db if running locally (not in docker)
+airflow/airflow.db
+
+# --- dbt (Data Build Tool) ---
+dbt/my_project/target/
+dbt/my_project/dbt_packages/
+dbt/my_project/logs/
+dbt/target/
+dbt/logs/
+dbt/dbt_packages/
+
+# --- Logs ---
+logs/
+*.log
